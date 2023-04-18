@@ -1,7 +1,7 @@
 // protoc --go_out=.  --go-grpc_out=. *.proto
 syntax = "proto3";
 
-package Configmgr;
+package configmgr;
 option go_package = "./;api";
 
 service Greeter {

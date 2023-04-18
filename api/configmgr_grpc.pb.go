@@ -4,7 +4,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v3.17.3
-// source: api.proto
+// source: configmgr.proto
 
 package api
 
@@ -21,10 +21,10 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Greeter_GetConfig_FullMethodName = "/Configmgr.Greeter/GetConfig"
-	Greeter_SetConfig_FullMethodName = "/Configmgr.Greeter/SetConfig"
-	Greeter_DelConfig_FullMethodName = "/Configmgr.Greeter/DelConfig"
-	Greeter_Watch_FullMethodName     = "/Configmgr.Greeter/Watch"
+	Greeter_GetConfig_FullMethodName = "/configmgr.Greeter/GetConfig"
+	Greeter_SetConfig_FullMethodName = "/configmgr.Greeter/SetConfig"
+	Greeter_DelConfig_FullMethodName = "/configmgr.Greeter/DelConfig"
+	Greeter_Watch_FullMethodName     = "/configmgr.Greeter/Watch"
 )
 
 // GreeterClient is the client API for Greeter service.
@@ -223,7 +223,7 @@ func (x *greeterWatchServer) Send(m *WatchRes) error {
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Greeter_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "Configmgr.Greeter",
+	ServiceName: "configmgr.Greeter",
 	HandlerType: (*GreeterServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -246,5 +246,5 @@ var Greeter_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "api.proto",
+	Metadata: "configmgr.proto",
 }

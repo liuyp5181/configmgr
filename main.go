@@ -1,11 +1,16 @@
 package main
 
 import (
+	"github.com/liuyp5181/base/config"
 	"github.com/liuyp5181/base/database"
 	"github.com/liuyp5181/base/service"
 	pb "github.com/liuyp5181/configmgr/api"
 	"github.com/liuyp5181/configmgr/handler"
 )
+
+func init() {
+	config.ServiceName = pb.Greeter_ServiceDesc.ServiceName
+}
 
 func main() {
 
@@ -14,7 +19,7 @@ func main() {
 		panic(err)
 	}
 
-	err = service.Connect()
+	err = service.InitClients()
 	if err != nil {
 		panic(err)
 	}
